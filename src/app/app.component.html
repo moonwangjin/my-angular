@@ -1,7 +1,4 @@
-<h1>{{"Title : "+title}}</h1>
+<p>{{greeting}}</p>
 
-
-
-
-
-
+<p *ngIf='greeting else elseT'>그리팅이 있음</p>
+<ng-template #elseT>그리팅이 없음</ng-template>
