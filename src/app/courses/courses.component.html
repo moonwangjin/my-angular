@@ -1,0 +1,12 @@
+<h2>Welcome to {{title}} Courses</h2> <!--인터폴레이션-->
+<h2 [textContent]="register"></h2> <!--Property binding-->
+<!-- 
+<img src="{{imgUrl}}" />
+<img [src]="imgUrl" /> Property binding -->
+<div (click)=" onOuterBlock($event)">
+  <h1>OuterBlock</h1>
+  <div (click)="onInnerBlock($event)">
+    <h2>InnerBlock</h2>
+    <button (click)="onButton($event)">save</button>
+  </div>
+</div>
