@@ -1,5 +1,5 @@
-<p>
-  {{greeting}}
-</p>
-<button (click)="leeButton()">leebutton</button>
-<input type="text" [(ngModel)]="greeting">
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes">{{ hero | json }}</li>
+  </ul>
+</div>

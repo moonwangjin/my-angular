@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoonComponent implements OnInit {
   greeting = "Hello";
+  //heroes:string[]= ['Superman','Hitgirl','Batman','Man'];
+  heroes:[{name:string}]= [{name:'Superman'}, {name:'Hitgirl'},{name:'Batman'},{name:'man'}];
+  
   
   constructor() { }
 
