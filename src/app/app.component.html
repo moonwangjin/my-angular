@@ -1,6 +1,11 @@
-<div>
+<div class="component">
   <ul>
-    <li *ngFor="let hero of heroes">{{ hero }}</li>
+    <li class="card" *ngFor="let product of members">
+      <div class="id">{{product.id}}</div>
+      <div class="name">{{product.name}}</div>      
+      <div class="price">{{product.price | currency}}</div>      
+      <div class="price">{{(product.price * Us) | roundPipe | number:'2.0-0'}}원</div>
+    </li>
   </ul>
 </div>
 <courses></courses>
