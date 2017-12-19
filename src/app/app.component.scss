@@ -1,13 +1,23 @@
 $primaryColor : rgb(179, 23, 23);
 $p10 : 10px;
+$tablet : 768px;
+$mobile : 414px;
+
 h1 {
   color:$primaryColor;
 }
 .component{
-  padding:1rem;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;     
+  @media screen and (max-width:$mobile) {
+    flex-direction: column;        
+  }    
   .card {
-    margin:$p10;
-    border: 1px solid #ddd;
+    flex-basis: 100%;
+    width:100%;    
+    border: 1px solid #ddd;       
     .id{
       color:#fff;
       background: $primaryColor;

@@ -2,11 +2,12 @@ import { MemberService } from './member.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-import { HeroesService } from './heroes.service';
+
 import { AppComponent } from './app.component';
 import { MoonComponent } from './moon/moon.component';
 import { CoursesComponent } from './courses/courses.component';
-import { RoundPipePipe } from './round-pipe.pipe';
+import { RoundPipe } from './round-pipe.pipe';
+import { ExchangeRateService } from './exchange-rate.service';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { RoundPipePipe } from './round-pipe.pipe';
     AppComponent,
     MoonComponent,
     CoursesComponent,
-    RoundPipePipe,
+    RoundPipe,
     
   ],
   imports: [
@@ -22,7 +23,7 @@ import { RoundPipePipe } from './round-pipe.pipe';
     FormsModule,
 
   ],
-  providers: [HeroesService, MemberService],
+  providers: [MemberService,ExchangeRateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

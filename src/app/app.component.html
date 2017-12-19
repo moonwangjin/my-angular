@@ -1,10 +1,13 @@
-<div class="component">
-  <ul>
+<div class="container">
+  <ul class="component">
     <li class="card" *ngFor="let product of members">
       <div class="id">{{product.id}}</div>
       <div class="name">{{product.name}}</div>      
-      <div class="price">{{product.price | currency}}</div>      
-      <div class="price">{{(product.price * Us) | roundPipe | number:'2.0-0'}}원</div>
+      <div class="price">달러 {{product.price | currency:'USD'}}</div>            
+      <div class="price">원화 {{(product.price * exr.Kr) | roundPipe |number}}원</div>
+      <div class="price">엔화 {{(product.price * exr.Jp) | currency:'JPY'}}</div>
+      <div class="price">유로 {{(product.price * exr.Euro) | currency:'EUR'}}</div>
+      <div class="price">영국 {{(product.price * exr.Uk) | currency:'GBP'}}</div>            
     </li>
   </ul>
 </div>

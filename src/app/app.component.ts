@@ -1,3 +1,4 @@
+import { ExchangeRateService } from './exchange-rate.service';
 import { MemberService } from './member.service';
 import { Component } from '@angular/core';
 
@@ -7,10 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {   
-  Us:number = 1085;
-  members; 
-  constructor(member:MemberService){    
+  exr:ExchangeRateService;
+  members:Object;   
+  constructor(member:MemberService, Exr:ExchangeRateService){    
     this.members = member.Product;
+    this.exr = Exr;
      console.log(member.Product);        
   }    
 }
